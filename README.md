@@ -8,10 +8,15 @@ Please contact sreenu.vattipally@glasgow.ac.uk for suggestions and comments.
 
 ## Installation
 
-clone GitHub repository
-cd SimpleSequenceRepeats
-cc microsatellites.c -o SimpleSequenceRepeats
+`clone GitHub repository`
+
+`cd SimpleSequenceRepeats`
+
+`cc microsatellites.c -o SimpleSequenceRepeats`
+
 
 ## Usage
+
+`SimpleSequenceRepeats  -i inFile -m minMotifSize -M maxMotifSize -r minRepeatNumber -f flankingSequence`
 
 

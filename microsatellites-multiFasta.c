@@ -46,11 +46,11 @@ int main(int argc, char **argv) {
         break;
 
       	case 'h':
-		printf("Usage: programName -i inFile -m minMotifSize -M maxMotifSize -r minRepeatNumber -f flankingSequence\n");
+		printf("Usage: SimpleSequenceRepeats -i inFile -m minMotifSize -M maxMotifSize -r minRepeatNumber -f flankingSequence\n");
         exit (0);
 
       	default:
-		printf("Usage: programName -i inFile -m minMotifSize -M maxMotifSize -r minRepeatNumber -f flankingSequence\n");
+		printf("Usage: SimpleSequenceRepeats -i inFile -m minMotifSize -M maxMotifSize -r minRepeatNumber -f flankingSequence\n");
         abort ();
       }
 
@@ -63,7 +63,7 @@ int main(int argc, char **argv) {
 	genome=(char*) calloc(maxGenomeSize,sizeof(char));
 
 
-	while(c=fgetc(input)){
+	while((c=fgetc(input))){
 		if(feof(input)) {
 			// End of the sequence
 			genome[genomeLen]='\0';
@@ -98,6 +98,6 @@ int main(int argc, char **argv) {
 	fclose(input);
 	}// End of fopen if
 
-	else printf("Usage: programName -i inFile -m minMotifSize -M maxMotifSize -r minRepeatNumber -f flankingSequence\n");
-
+	else printf("Usage: SimpleSequenceRepeats  -i inFile -m minMotifSize -M maxMotifSize -r minRepeatNumber -f flankingSequence\n");
+	
 } // End of Main
